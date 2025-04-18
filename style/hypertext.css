@@ -1,0 +1,23 @@
+/*
+Created by Sean L. on Apr 19
+Last modified by Sean L. on Apr 19
+
+MyFeather Site Page
+style/hypertext.css
+
+A Feather, 2025. All rights reserved.
+*/
+
+@import url('palette.css');
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 3s;
+    transition: color 0.3s, transform 0.3s;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--accent-dark)
+}

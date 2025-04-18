@@ -1,11 +1,14 @@
-body {
-    --black-accent: #011;
-    --dark-accent: #033;
-    --reg-accent: #066;
-    --light-accent: #0aa;
-    --dark-gray: #333;
-    --reg-gray: #666;
-    --caption-gray: #888;
-    --bg-gray: #aaa;
-    --light-gray: #eee;
+/*
+Created by Sean L. on Apr 19
+Last modified by Sean L. on Apr 19
+
+MyFeather Site Page
+style/hypertext.css
+
+A Feather, 2025. All rights reserved.
+*/
+
+:root {
+    --accent: #BEAEFF;
+    --accent-dark: #976799;
 }

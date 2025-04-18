@@ -1,0 +1,50 @@
+/*
+Created by Sean L. on Apr 19
+Last modified by Sean L. on Apr 19
+
+MyFeather Site Page
+style/maintenance-layout.css
+
+A Feather, 2025. All rights reserved.
+*/
+
+@import url('fonts.css');
+@import url('hypertext.css');
+
+:root {
+    font-family: 'CustomFont', 'Segoe UI', system-ui, sans-serif;
+}
+
+html {
+    padding: 0px;
+    margin: 0px;
+}
+
+div.content {
+    margin: 100px;
+}
+
+div.heading-block h1 {
+    font-size: 100px;
+}
+
+div.section-block {
+    margin-top: 100px;
+}
+
+div.footer-block::before {
+    content: '';
+    display: block;
+    background-color: #ddd;
+    width: 50vw;
+    height: 1px;
+    margin-bottom: 100px;
+}
+
+div.footer-block {
+    margin-top: 100px;
+}
+
+ins {
+    text-decoration: none;
+}

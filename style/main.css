@@ -10,30 +10,45 @@ A Feather, 2025. All rights reserved.
 
 */
 
-@import url('fonts.css');
-@import url('hypertext.css');
-
 * ,html, body {
     padding: 0px;
     margin: 0px;
     font-family: HWFont;
 }
 
+:root {
+    --accent: #BEAEFF;
+    --accent-dark: #976799;
+}
+
+@font-face {
+    font-family: 'HWFont';
+    /* src: url('../font/WenJinMinchoWP0-Regular.ttf') format('truetype'); */
+    src: url('../font/hw.ttf') format('truetype');
+}
+
 ::selection {
     background-color: rgba(255,255,255,.3);
 }
 
-body {
-    overflow: hidden;
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 3s;
+    transition: color 0.3s, transform 0.3s;
+}
+
+a:hover {
+    color: var(--accent-dark)
 }
 
 div.content {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(#BEAEFF, #FF9EEA);
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 40lvh;
 }
 
 div.heading-block {
@@ -42,19 +57,23 @@ div.heading-block {
     justify-content: center;
     align-items: flex-start;
     gap: 1.5rem;
-    margin: 10rem 6rem;
+    margin: 10lvh 0lvw 0 10lvw;
 
 }
 
 div.heading-block h1 {
-    font-size: 6rem;
+    font-size: 8lvw;
+    
     color: #fff;
     text-shadow: 0px 0px 15px rgba(255,255,255,.2);
+    white-space:nowrap; 
 }
 
 div.heading-block h2 {
+    font-size: 3lvw;
     color: rgba(255,255,255,.3);
     text-shadow: 0px 0px 3px rgba(255,255,255,.2);
+    white-space:nowrap; 
 }
 
 div.footer-block {
@@ -72,10 +91,7 @@ div.footer-block > ins {
     text-align: end;
 }
 
-@media screen and (max-width: 800px) {
-    div.heading-block {
-        writing-mode: vertical-lr;
-    }
+@media screen and (max-width: 700px) {
 
     div.footer-block {
         align-items: center;

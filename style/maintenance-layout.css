@@ -6,77 +6,86 @@ MyFeather Site Page
 style/maintenance-layout.css
 
 A Feather, 2025. All rights reserved.
+
+
 */
 
 @import url('fonts.css');
 @import url('hypertext.css');
 
-:root {
-    font-family: 'CustomFont', 'Segoe UI', system-ui, sans-serif;
-}
-
-html, body {
+* ,html, body {
     padding: 0px;
     margin: 0px;
+    font-family: HWFont;
 }
 
+::selection {
+    background-color: rgba(255,255,255,.3);
+}
+
+body {
+    overflow: hidden;
+}
+
+div.content {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#BEAEFF, #FF9EEA);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+div.heading-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin: 10rem 6rem;
+
+}
 
 div.heading-block h1 {
-    font-size: 100px;
+    font-size: 6rem;
     color: #fff;
-    text-shadow: 0px 0px 15px rgba(255,255,255,0.2);
+    text-shadow: 0px 0px 15px rgba(255,255,255,.2);
 }
 
 div.heading-block h2 {
-    color: rgba(255,255,255,0.3);
-    text-shadow: 0px 0px 3px rgba(255,255,255,0.2);
-}
-
-div.section-block {
-    margin: 5rem;
-}
-
-div.footer-block::before {
-    content: '';
-    display: block;
-    background-color: #ddd;
-    width: 50vw;
-    height: 1px;
-    margin-bottom: 100px;
-}
-
-
-div.heading-block {
-    margin-top: 0px;
-    padding-top: 0px;
-    padding: 100px;
-    padding-bottom: 200px;
-    background: linear-gradient(#BEAEFF, #FF9EEA, #fff);
+    color: rgba(255,255,255,.3);
+    text-shadow: 0px 0px 3px rgba(255,255,255,.2);
 }
 
 div.footer-block {
-    margin: 100px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 6rem;
+    justify-content: center;
+    align-items: flex-end;
 }
 
-ins {
+div.footer-block > ins {
     text-decoration: none;
+    color: rgba(255,255,255,.5);
+    text-shadow: 0px 0px 3px rgba(255,255,255,.2);
+    text-align: end;
 }
 
-.footer-block > * {
-    display: block;
-    margin-top: 20px;
-}
-
-@media screen and (max-width: 500px) {
-    .heading-block {
-        writing-mode: vertical-rl;
-        width: 100vw;
+@media screen and (max-width: 800px) {
+    div.heading-block {
+        writing-mode: vertical-lr;
     }
-    .heading-block h2 {
-        margin-right: 1em;
-    }
-}
 
-* {
-    margin-left: 0; margin-right: 0;
+    div.footer-block {
+        align-items: center;
+    }
+
+    div.footer-block > ins {
+        text-align: center;
+    }
+
+    div.footer-block {
+        margin: 0 2rem 1rem 2rem;
+    }
 }

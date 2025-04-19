@@ -18,14 +18,5 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;
     color: var(--accent-dark)
 }
-
-#trigger {
-    transform: translateX(10px);
-}
-
-/* #trigger:hover {
-    offset: 0 10;
-} */

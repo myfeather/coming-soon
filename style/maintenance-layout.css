@@ -24,12 +24,12 @@ html, body {
 div.heading-block h1 {
     font-size: 100px;
     color: #fff;
-    text-shadow: 0px 0px 10px rgba(255,255,255,0.5);
+    text-shadow: 0px 0px 15px rgba(255,255,255,0.2);
 }
 
 div.heading-block h2 {
-    color: rgba(255,255,255,0.75);
-    text-shadow: 0px 0px 3px rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.3);
+    text-shadow: 0px 0px 3px rgba(255,255,255,0.2);
 }
 
 div.section-block {

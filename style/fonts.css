@@ -10,5 +10,6 @@ A Feather, 2025. All rights reserved.
 
 @font-face {
     font-family: 'CustomFont';
-    src: url('../font/WenJinMinchoWP0-Regular.ttf') format('truetype');
+    /* src: url('../font/WenJinMinchoWP0-Regular.ttf') format('truetype'); */
+    src: url('../font/hw.ttf') format('truetype');
 }

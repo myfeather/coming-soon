@@ -33,7 +33,7 @@ div.heading-block h2 {
 }
 
 div.section-block {
-    margin: 100px;
+    margin: 5rem;
 }
 
 div.footer-block::before {
@@ -60,4 +60,23 @@ div.footer-block {
 
 ins {
     text-decoration: none;
+}
+
+.footer-block > * {
+    display: block;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 500px) {
+    .heading-block {
+        writing-mode: vertical-rl;
+        width: 100vw;
+    }
+    .heading-block h2 {
+        margin-right: 1em;
+    }
+}
+
+* {
+    margin-left: 0; margin-right: 0;
 }

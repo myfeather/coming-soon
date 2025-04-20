@@ -79,12 +79,14 @@ div.heading-block {
 
 div.heading-block h1 {
     font-size: 6lvw;
+    font-weight: normal;
     color: rgb(255, 255, 255);
-    text-shadow: rgba(255, 255, 255, 0.4) 0 0 15px;
+    text-shadow: rgba(255, 255, 255, 0.6) 0 0 15px;
 }
 
 div.heading-block h2 {
-    font-size: 3lvw;
+    font-size: 2lvw;
+    font-weight: bold;
     color: rgba(255, 255, 255, 0.3);
     text-shadow: rgba(255, 255, 255, 0.2) 0 0 3px;
 }
@@ -92,13 +94,14 @@ div.heading-block h2 {
 div.footer-block {
     display: flex;
     flex-direction: column;
-    margin: 0px 2lvw;
+    margin: 0 8lvw 0 0;
     justify-content: center;
     align-items: flex-end;
 }
 
 div.footer-block>ins {
     font-size: 1lvw;
+    font-weight: lighter;
     text-decoration: none;
     color: rgba(255, 255, 255, 0.5);
     text-shadow: rgba(255, 255, 255, 0.2) 0px 0px 3px;
@@ -125,6 +128,7 @@ div.footer-block>ins {
 
     div.footer-block {
         align-items: center;
+        margin: 0;
     }
 
     div.footer-block>ins {

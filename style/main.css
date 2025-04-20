@@ -10,7 +10,9 @@ A Feather, 2025. All rights reserved.
 
 */
 
-* ,html, body {
+*,
+html,
+body {
     padding: 0px;
     margin: 0px;
     font-family: HWFont;
@@ -23,12 +25,11 @@ A Feather, 2025. All rights reserved.
 
 @font-face {
     font-family: 'HWFont';
-    /* src: url('../font/WenJinMinchoWP0-Regular.ttf') format('truetype'); */
     src: url('../font/hw.ttf') format('truetype');
 }
 
 ::selection {
-    background-color: rgba(255,255,255,.3);
+    background-color: rgba(255, 255, 255, .3);
 }
 
 a {
@@ -42,10 +43,26 @@ a:hover {
     color: var(--accent-dark)
 }
 
+*,
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: HWFont;
+}
+
+::selection {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+body {
+    overflow: hidden;
+}
+
 div.content {
     width: 100%;
-    min-height: 100vh;
-    background: linear-gradient(#BEAEFF, #FF9EEA);
+    height: 100vh;
+    background: linear-gradient(rgb(190, 174, 255), rgb(255, 158, 234));
     display: flex;
     flex-direction: column;
     gap: 40lvh;
@@ -57,51 +74,63 @@ div.heading-block {
     justify-content: center;
     align-items: flex-start;
     gap: 1.5rem;
-    margin: 10lvh 0lvw 0 10lvw;
-
+    margin: 8lvh 0 0 6lvw;
 }
 
 div.heading-block h1 {
-    font-size: 8lvw;
-    
-    color: #fff;
-    text-shadow: 0px 0px 15px rgba(255,255,255,.2);
-    white-space:nowrap; 
+    font-size: 6lvw;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(255, 255, 255, 0.4) 0 0 15px;
 }
 
 div.heading-block h2 {
     font-size: 3lvw;
-    color: rgba(255,255,255,.3);
-    text-shadow: 0px 0px 3px rgba(255,255,255,.2);
-    white-space:nowrap; 
+    color: rgba(255, 255, 255, 0.3);
+    text-shadow: rgba(255, 255, 255, 0.2) 0 0 3px;
 }
 
 div.footer-block {
     display: flex;
     flex-direction: column;
-    margin: 0 6rem;
+    margin: 0px 2lvw;
     justify-content: center;
     align-items: flex-end;
 }
 
-div.footer-block > ins {
+div.footer-block>ins {
+    font-size: 1lvw;
     text-decoration: none;
-    color: rgba(255,255,255,.5);
-    text-shadow: 0px 0px 3px rgba(255,255,255,.2);
+    color: rgba(255, 255, 255, 0.5);
+    text-shadow: rgba(255, 255, 255, 0.2) 0px 0px 3px;
     text-align: end;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
+    div.content {
+        gap: 20lvh;
+    }
+    div.heading-block {
+        writing-mode: vertical-lr;
+        gap: 2lvh;
+        margin: 8lvh 4lvw;
+    }
+
+    div.heading-block h1 {
+        font-size: 6lvh;
+    }
+
+    div.heading-block h2 {
+        font-size: 3lvh;
+    }
 
     div.footer-block {
         align-items: center;
     }
 
-    div.footer-block > ins {
+    div.footer-block>ins {
         text-align: center;
+        font-size: 2lvh;
     }
 
-    div.footer-block {
-        margin: 0 2rem 1rem 2rem;
-    }
+
 }

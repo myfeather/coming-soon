@@ -172,11 +172,11 @@ div.ins-block>ins {
         margin: 0;
     }
 
-    /* div.schedule-block {
-        display: none;
-    } */
-
     div.schedule-block {
+        display: none;
+    }
+
+    /* div.schedule-block {
         flex-direction: column;
         align-items: center;
     }
@@ -188,7 +188,7 @@ div.ins-block>ins {
     div.progress-bar {
         height: 2lvh;
         width: 20lvw;
-    }
+    } */
 
     div.ins-block {
         align-items: center;

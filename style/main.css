@@ -10,22 +10,19 @@ A Feather, 2025. All rights reserved.
 
 */
 
+@import url("https://fonts.itedev.com/130-SS%20Zhui%20Guang%20Shou%20Xie%20Ti/index.css");
+
 *,
 html,
 body {
     padding: 0;
     margin: 0;
-    font-family: HWFont;
+    font-family: '130-SS Zhui Guang Shou Xie Ti';
 }
 
 :root {
     --accent: #BEAEFF;
     --accent-dark: #976799;
-}
-
-@font-face {
-    font-family: 'HWFont';
-    src: url('../font/hw.ttf') format('truetype');
 }
 
 ::selection {
@@ -48,7 +45,7 @@ html,
 body {
     padding: 0;
     margin: 0;
-    font-family: HWFont;
+    font-family: '130-SS Zhui Guang Shou Xie Ti';
 }
 
 ::selection {

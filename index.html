@@ -1,13 +1,3 @@
-<!--
-Created by Sean L. on Apr 18
-Last modified by ABloom An And Sean L. on Apr 19
-
-AFeather Site Page
-/index.html
-
-A Feather, 2023-2025. All rights reserved.
--->
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -15,7 +5,7 @@ A Feather, 2023-2025. All rights reserved.
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./style/main.css" />
-	<title>一片羽 | 正在维护</title>
+	<title>一片羽 | 正在开发</title>
 	<meta name="description" content="这是一片羽正在维护的界面" />
 	<meta name="theme-color" content="#BEAEFF" />
 	<link rel="icon" href="./static/logo.svg" type="image/x-icon" />
@@ -24,18 +14,51 @@ A Feather, 2023-2025. All rights reserved.
 <body>
 	<div class="content">
 		<div class="heading-block">
-			<h1>此页面正在维护中。</h1>
-			<h2>Page Under Maintenance.</h2>
+			<h1>此页面正在努力开发中。</h1>
+			<h2>我们一起期待一下吧~</h2>
 		</div>
 		<div class="footer-block">
-			<ins>
-				一片羽 | 让零散的心事，落地成光。
-			</ins>
-			<ins>
-				Copyright © 2023-2025 A Feather. All rights reserved.
-			</ins>
+			<div class="schedule-block">
+				<h3 id="name">开发进度</h3>
+				<div class="progress-bar">
+					<div id="progress-bar-schedule">
+					</div>
+				</div>
+			</div>
+			<div class="ins-block">
+				<ins>
+					一片羽 | 让零散的心事，落地成光。
+				</ins>
+				<ins>
+					Copyright © 2023-2025 A Feather. All rights reserved.
+				</ins>
+			</div>
 		</div>
 	</div>
+	<script>
+		const xhr = new XMLHttpRequest();
+		const jsonFilePath = './data/data.json';
+		xhr.open('GET', jsonFilePath, true);
+
+		xhr.onreadystatechange = function () {
+			if (xhr.readyState === 4) {
+				if (xhr.status === 200) {
+					try {
+						const jsonData = JSON.parse(xhr.responseText);
+						document.getElementById("name").innerText = jsonData.name + "开发进度"
+						document.getElementById("progress-bar-schedule").style.width = jsonData.schedule + "%"
+					} catch (parseError) {
+						// console.error('解析 JSON 数据时出错:', parseError);
+					}
+				} else {
+					// console.error('请求 JSON 文件时出错，状态码:', xhr.status);
+				}
+			}
+		};
+
+		// 发送请求
+		xhr.send();
+	</script>
 </body>
 
 </html>

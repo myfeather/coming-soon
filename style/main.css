@@ -81,7 +81,7 @@ div.heading-block h1 {
     font-size: 6lvw;
     font-weight: normal;
     color: rgb(255, 255, 255);
-    text-shadow: rgb(255, 206, 244) 0 0 15px;
+    text-shadow: rgb(255, 158, 234, .5) 0 0 15px;
 }
 
 div.heading-block h2 {
@@ -93,13 +93,52 @@ div.heading-block h2 {
 
 div.footer-block {
     display: flex;
-    flex-direction: column;
-    margin: 0 8lvw 0 0;
-    justify-content: center;
+    flex-direction: row;
     align-items: flex-end;
+    justify-content: space-between;
+    gap: 10lvw;
+    margin: 0 6lvw;
 }
 
-div.footer-block>ins {
+div.schedule-block {
+    display: flex;
+    flex-direction: row;
+    gap: .5lvh;
+    align-items: center;
+}
+
+div.schedule-block>h3 {
+    font-size: 2lvw;
+    color: rgb(255, 255, 255);
+    text-shadow: rgba(255, 255, 255, .2) 0 0 3px;
+}
+
+div.progress-bar {
+    width: 10lvw;
+    height: 4lvh;
+    border-radius: 50rem;
+    background-color: rgba(255, 255, 255,.3);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+}
+
+div.progress-bar> div {
+    width: 1%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+div.ins-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: .5lvh;
+}
+
+div.ins-block>ins {
     font-size: 1lvw;
     font-weight: lighter;
     text-decoration: none;
@@ -110,7 +149,7 @@ div.footer-block>ins {
 
 @media screen and (max-width: 800px) {
     div.content {
-        gap: 20lvh;
+        gap: 10lvh;
     }
     div.heading-block {
         writing-mode: vertical-lr;
@@ -127,11 +166,36 @@ div.footer-block>ins {
     }
 
     div.footer-block {
+        flex-direction: column;
         align-items: center;
+        gap: 4lvh;
         margin: 0;
     }
 
-    div.footer-block>ins {
+    /* div.schedule-block {
+        display: none;
+    } */
+
+    div.schedule-block {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.schedule-block > h3 {
+        font-size: 4lvw;
+    }
+
+    div.progress-bar {
+        height: 2lvh;
+        width: 20lvw;
+    }
+
+    div.ins-block {
+        align-items: center;
+        margin: 0 0 2lvh 0;
+    }
+
+    div.ins-block>ins {
         text-align: center;
         font-size: 2lvh;
     }

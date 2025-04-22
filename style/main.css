@@ -74,7 +74,7 @@ div.heading-block h1 {
 div.heading-block h2 {
     font-size: 2lvw;
     font-weight: bold;
-    color: rgba(255, 255, 255,.3);
+    color: rgba(255, 255, 255,.5);
     text-shadow: rgba(255, 255, 255, .2) 0 0 3px;
 }
 
@@ -96,7 +96,8 @@ div.schedule-block {
 
 div.schedule-block>h3 {
     font-size: 2lvw;
-    color: rgb(255, 255, 255);
+    color: rgba(255, 255, 255,.5);
+    
     text-shadow: rgba(255, 255, 255, .2) 0 0 3px;
 }
 
@@ -129,7 +130,7 @@ div.ins-block>ins {
     font-size: 1lvw;
     font-weight: lighter;
     text-decoration: none;
-    color: rgba(255, 255, 255, .5);
+    color: rgba(255, 255, 255, .3);
     text-shadow: rgba(255, 255, 255, .2) 0px 0px 3px;
     text-align: end;
 }
@@ -145,7 +146,7 @@ div.ins-block>ins {
     }
 
     div.heading-block h1 {
-        font-size: 6lvh;
+        font-size: 5lvh;
     }
 
     div.heading-block h2 {
@@ -159,11 +160,11 @@ div.ins-block>ins {
         margin: 0;
     }
 
-    div.schedule-block {
-        display: none;
-    }
-
     /* div.schedule-block {
+        display: none;
+    } */
+
+    div.schedule-block {
         flex-direction: column;
         align-items: center;
     }
@@ -175,7 +176,7 @@ div.ins-block>ins {
     div.progress-bar {
         height: 2lvh;
         width: 20lvw;
-    } */
+    }
 
     div.ins-block {
         align-items: center;

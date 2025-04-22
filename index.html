@@ -15,10 +15,10 @@
 	<div class="content">
 		<div class="heading-block">
 			<h1>此页面正在努力开发中。</h1>
-			<h2>我们一起期待一下吧~</h2>
+			<h2>让我们一起期待一下吧~</h2>
 		</div>
 		<div class="footer-block">
-			<div class="schedule-block">
+			<div class="schedule-block" id="schedule-block">
 				<h3 id="name">开发进度</h3>
 				<div class="progress-bar">
 					<div id="progress-bar-schedule">
@@ -47,6 +47,7 @@
 					try {
 						const jsonData = JSON.parse(xhr.responseText);
 						document.getElementById("name").innerText = jsonData.name + "开发进度"
+						document.getElementById("schedule-block").title = jsonData.name + "开发进度：" + jsonData.schedule + "%"
 						document.getElementById("progress-bar-schedule").style.width = jsonData.schedule + "%"
 					} catch (parseError) {
 						// console.error('解析 JSON 数据时出错:', parseError);
